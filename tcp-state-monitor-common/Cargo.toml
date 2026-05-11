@@ -1,0 +1,13 @@
+[package]
+name = "tcp-state-monitor-common"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+
+[dependencies]
+# no_std compatible, no external deps needed
+
+[features]
+default = ["std"]
+std = []

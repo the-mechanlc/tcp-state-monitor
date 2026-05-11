@@ -1,0 +1,13 @@
+[package]
+name = "tcp-state-monitor-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aya-ebpf = "0.1"
+aya-log-ebpf = "0.1"
+tcp-state-monitor-common = { path = "../tcp-state-monitor-common", default-features = false }
+
+[[bin]]
+name = "tcp-state-monitor"
+path = "src/main.rs"

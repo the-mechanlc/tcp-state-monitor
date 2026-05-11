@@ -1,0 +1,11 @@
+[workspace]
+members = [
+    "tcp-state-monitor",
+    "tcp-state-monitor-common",
+    "tcp-state-monitor-ebpf",
+]
+default-members = [
+    "tcp-state-monitor",
+    "tcp-state-monitor-common",
+]
+resolver = "2"

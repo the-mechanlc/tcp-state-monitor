@@ -1,0 +1,17 @@
+[package]
+name = "tcp-state-monitor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aya = { version = "0.13", features = ["async_tokio"] }
+aya-log = "0.2"
+tcp-state-monitor-common = { path = "../tcp-state-monitor-common" }
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+log = "0.4"
+env_logger = "0.11"
+anyhow = "1"
+
+[build-dependencies]
+aya-build = "0.1"

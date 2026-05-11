@@ -1,0 +1,5 @@
+[build]
+# default target for workspace (userspace uses host)
+
+[target.bpfel-unknown-none]
+rustflags = ["-C", "link-arg=--btf"]
