@@ -66,8 +66,10 @@ fn try_tcp_state_monitor(ctx: TracePointContext) -> Result<(), i64> {
         comm,
         src_addr: saddr,
         dst_addr: daddr,
-        src_port: u16::from_be(sport),
-        dst_port: u16::from_be(dport),
+        // Ports are already in host byte order — the kernel calls ntohs()
+        // before storing them in the inet_sock_set_state tracepoint args.
+        src_port: sport,
+        dst_port: dport,
         old_state,
         new_state,
     };
